@@ -87,10 +87,8 @@ elif page == pages[3]:
     X_test[num] = scaler.transform(X_test[num])
     
     reg = joblib.load("model_reg_line")
-    rf = joblib.load("model_reg_line")
-    # rf = joblib.load("model_reg_rf")
-    knn = joblib.load("model_reg_line")
-    # knn = joblib.load("model_reg_knn")
+    rf = joblib.load("model_reg_rf")
+    knn = joblib.load("model_reg_knn")
     
     y_pred_reg=reg.predict(X_test)
     y_pred_rf=rf.predict(X_test)
